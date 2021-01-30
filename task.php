@@ -8,7 +8,9 @@
 </head>
 <body>
   
+<div id='task'>
 
+</div>
 <?php  
 
 // $arr = [1, 3, 2, 2, 2, 2, 3, 3, 3, 10];
@@ -140,12 +142,12 @@
 
 // echo "У меня $apples яблок и $oranges апельсинв";
 
-function func($r){
-  $r++;
-}
-$r =1;
-func(func($r));
-echo $r;
+// function func($r){
+//   $r++;
+// }
+// $r =1;
+// func(func($r));
+// echo $r;
 
 ?>
 <script src="/app.js"></script>

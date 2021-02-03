@@ -427,3 +427,118 @@
 //     console.log(`факториал числа ${int}! = ${fact}`);
 // }
 // factorial(5);
+
+
+
+// Задачи на функции работы со строками в JavaScript
+
+// Дана строка 'js'. Сделайте из нее строку 'JS'.
+
+// let str = 'js';
+// console.log(str.toUpperCase());
+
+// Дана строка 'JS'. Сделайте из нее строку 'js'.
+// let str = 'JS';
+// console.log(str.toLowerCase());
+
+// Дана строка 'я учу javascript!'. Найдите количество символов в этой строке
+
+// let str = 'я учу javascript!';
+// console.log(str.length);
+
+// Дана строка 'я учу javascript!'. Вырежите из нее слово 'учу' и слово 'javascript' тремя разными способами 
+
+// let str = 'я учу javascript!';
+// console.log(str.substr(2, 3));
+// console.log(str.slice(2, 5));
+// console.log(str.substring(2, 5));
+
+//  Дана строка 'я учу javascript!'. Найдите позицию подстроки 'учу'.
+
+// let str = 'я учу javascript!';
+// console.log(str.indexOf('учу'));
+
+
+
+// Дана переменная str, в которой хранится какой-либо текст. Реализуйте обрезание длинного 
+// текста по следующему принципу: если количество символов этого текста больше заданного в переменной n,
+//  то в переменную result запишем первые n символов строки 
+// str и добавим в конец троеточие '...'. В противном случае в переменную result запишем содержимое переменной str.
+
+// function trimString(n) {
+//     let str = 'i love javascript';
+//     let result = '';
+//     if (n > str.length) {
+//         result = str.slice(0, 6) + ' ...';
+//     } else {
+//         result = str;
+//     }
+//     return result;
+// }
+// console.log(trimString(19));
+
+
+// Дана строка 'Я-учу-javascript!'. Замените все дефисы на '!' с помощью глобального поиска и замены.
+
+// let str = 'Я-учу-javascript!';
+// console.log(str.replace(/-/g, '!'));
+
+
+// Дана строка 'я учу javascript!'. С помощью метода split запишите каждое слово этой строки в отдельный элемент массива.
+
+// let str = 'я учу javascript!';
+// console.log(str.split(' '));
+
+// Дана строка 'я учу javascript!'. С помощью метода split запишите каждый символ этой строки в отдельный элемент массива.
+
+// let str = 'я учу javascript!';
+// console.log(str.split(''));
+
+
+// В переменной date лежит дата в формате '2025-12-31'. Преобразуйте эту дату в формат '31.12.2025'.
+
+// let date = '2025-12-31';
+// console.log(date.split('-').reverse().join('.'));
+
+
+// Дан массив ['я', 'учу', 'javascript', '!']. С помощью метода join преобразуйте массив в строку 'я+учу+javascript+!'.
+
+// let arr = ['я', 'учу', 'javascript', '!'];
+// console.log(arr.join('+'));
+
+//  Преобразуйте первую букву строки в верхний регистр.
+
+// let str = 'javascript';
+// str = str.replace(str[0], str[0].toUpperCase());
+// console.log(str);
+
+// Преобразуйте первую букву каждого слова строки в верхний регистр.
+
+// let str = 'i love javascript!';
+
+// str = str.split(' ');
+// let strUpper = [];
+// for (let i = 0; i < str.length; i++) {
+//     let firstUpper = str[i][0].toUpperCase();
+//     strUpper.push(str[i].replace(str[i][0], firstUpper));
+
+// }
+// console.log(strUpper.join(' '));
+
+
+// Преобразуйте строку 'var_test_text' в 'varTestText'. Скрипт, конечно же, должен работать с любыми аналогичными строками.
+
+// let str = 'var_test_text'
+
+// function upper(str) {
+//     str = str.split('_');
+//     let strUpper = [str[0]];
+//     for (let i = 1; i < str.length; i++) {
+
+//         strUpper.push(str[i].replace(str[i][0], str[i][0].toUpperCase()));
+
+//     }
+//     console.log(strUpper.join(''));
+// }
+
+// upper(str);

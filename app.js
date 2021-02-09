@@ -602,3 +602,520 @@
 // Дан объект {js:'test', jq: 'hello', css: 'world'}. Получите массив его ключей.
 // let obj = { js: 'test', jq: 'hello', css: 'world' };
 // console.log(Object.keys(obj));
+
+// тест
+// Дана строка. Сделайте заглавным первый символ этой строки не используя цикл. Найдите два решения
+// let str = 'i love javascript';
+// str = str.split(' ');
+// let str1 = str[0].replace(str[0][0], str[0][0].toUpperCase());
+// str[0] = str1;
+// str = str.join(' ');
+
+// let str = 'i love javascript';
+// str = str.split(' ');
+// let str1 = str.shift(str);
+// if (str1.length > 1) {
+//     str1 = str1.replace(str1[0][0], str1[0][0].toUpperCase());
+// } else {
+//     str1 = str1.toUpperCase();
+// }
+// str.unshift(str1);
+// console.log(str.join(' '));
+
+// let str = 'hello asdasdsa asdsad';
+// str = str[0].toUpperCase() + str.substr(1);
+// alert(str);
+
+// let str = 'hello asdasdas asdasd';
+// str = str.split('');
+// str[0] = str[0].toUpperCase();
+// let result = str.join('');
+// alert(result);
+
+// Дана строка, например, '123456'. Переверните эту строку (сделайте из нее '654321') не используя цикл
+// let str = '123456';
+// str = str.split('').reverse();
+// alert(str.join(''));
+
+// Проверьте, что строка начинается на http://
+// function http(str) {
+//     if (str.substr(0, 7) == 'http://') {
+//         console.log('yes')
+//     } else {
+//         console.log(str.substr(0, 7));
+//     }
+// }
+// http('http://asd')
+
+// Проверьте, что строка заканчивается на .html
+// function http(str) {
+//     if (str.substr(-5) == '.html') {
+//         console.log('yes')
+//     } else {
+//         console.log(str.substr(-5));
+//     }
+// }
+// http('asdasdasd.html')
+
+// Сделайте функцию, которая возвращает квадрат числа. Число передается параметром.
+// function square(int) {
+//     return int * int;
+//     return Math.pow(int, 2);
+// }
+// alert(square(4));
+
+// Сделайте функцию, которая отнимает от первого числа второе и делит на третье.
+// function sum(int1, int2, int3) {
+//     return (int1 - int2) / int3;
+// }
+// alert(Math.floor(sum(25, 8, 2)))
+
+// Сделайте функцию, которая принимает параметром число от 1 до 7, а возвращает день недели на русском языке.
+// let int = prompt("число");
+// function dayInWeek(int) {
+//     switch (int) {
+//         case 1:
+//             alert('Понедельник');
+//             break;
+//         case 2:
+//             alert('вторник');
+//             break;
+//         case 3:
+//             alert('среда');
+//             break;
+//         case 4:
+//             alert('четверг');
+//             break;
+//         case 5:
+//             alert('пятница');
+//             break;
+//         case 6:
+//             alert('суббота');
+//             break;
+//         case 7:
+//             alert('воскресение');
+//             break;
+
+//         default:
+//             alert('вы ввели некоректные данные')
+//             break;
+//     }
+// }
+// dayInWeek(Number(int));
+
+// Дан массив с числами. Проверьте, что в этом массиве есть число 5. Если есть - выведите 'да', а если нет - выведите 'нет'.
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// for (let i = 0; i <= arr.length; i++) {
+//     if (arr[i] === 10) {
+//         alert('да')
+//         break;
+//     } else if (arr[i] !== 5 && arr.length === i) {
+//         alert('нет')
+//     }
+// }
+
+// Дано число, например 31. Проверьте, что это число не делится ни на одно другое число кроме себя самого и единицы. 
+// То есть в нашем случае нужно проверить, 
+// что число 31 не делится на все числа от 2 до 30. Если число не делится - выведите 'false', а если делится - выведите 'true'.
+// let int = 31;
+// let i = 2;
+// while (i < int) {
+//     if (int % i == 0) {
+//         alert('true')
+//         break;
+//     } else if (int % i != 0 && int - 1 == i) {
+//         alert('false');
+//         break;
+//     }
+//     i++;
+// }
+
+// Дан массив с числами. Проверьте, есть ли в нем два одинаковых числа подряд. Если есть - выведите 'да', а если нет - выведите 'нет'.
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// for (let i = 0; i < arr.length; i++) {
+
+//     if (arr[i] === arr[i + 1]) {
+//         alert('true');
+//         break;
+//     } else if (arr[i] !== arr[i + 1] && arr.length == i + 1) {
+//         alert('false');
+//     }
+// }
+
+// меньшее значение своя функция Math.min()
+// function min(int1, int2) {
+//     if (int1 < int2) {
+//         console.log(int1)
+//     } else if (int1 > int2) {
+//         console.log(int2)
+//     } else {
+//         console.log('вы ввели одинаковые или неккоректные числа')
+//     }
+// }
+// min(2, 3)
+
+// рекурсия проверки чётности числа
+// function isEven(int) {
+//     if (int % 2 == 0) {
+//         return 'чётное'
+//     } else if (int % 2 == 1) {
+//         return 'не чётное'
+//     } else {
+//         return (isEven(Math.abs(int)))
+//     }
+// }
+// console.log(isEven(2))
+
+// подсчёт букв
+// function countChar(str, char) {
+//     let count = 0;
+//     for (let i = 0; i < str.length; i++) {
+
+//         if (str[i] == char) {
+//             count++;
+//         }
+//     }
+
+//     console.log(count);
+// }
+// countChar('i love javascript', 'i')
+
+// Задачи на приемы работы с циклами на JavaScript
+
+
+// С помощью цикла for сформируйте строку '123456789' и запишите ее в переменную str.
+
+// let int = '';
+// for (let i = 1; i <= 9; i++) {
+//     int = String(int) + String(i);
+// }
+// console.log(int)
+
+// С помощью цикла for сформируйте строку '987654321' и запишите ее в переменную str.
+// let int = '';
+// for (let i = 9; i >= 1; i--) {
+//     int = String(int) + String(i);
+// }
+// console.log(int)
+
+// С помощью цикла for сформируйте строку '-1-2-3-4-5-6-7-8-9-' и запишите ее в переменную str.
+// let int = '-';
+// for (let i = 1; i <= 9; i++) {
+//     int = String(int) + String(i) + '-';
+// }
+// console.log(int)
+
+// Нарисуйте пирамиду, как показано на рисунке, только у вашей пирамиды должно быть 20 рядов, а не 5:
+// let x = 'x';
+// let y = 'x';
+// console.log(x)
+// for (let i = 0; i < 20; i++) {
+//     y += x;
+//     console.log(y)
+// }
+
+//  С помощью двух вложенных циклов нарисуйте следующую пирамидку:
+// for (let i = 1; i <= 9; i++) {
+//     document.write("\n")
+//     for (let j = 1; j <= i; j++) {
+//         document.write(i)
+//     }
+// }
+// Нарисуйте пирамиду, как показано на рисунке, воспользовавшись циклом for
+// let x = 'xx';
+// let y = '';
+// for (let i = 0; i < 5; i++) {
+//     console.log(y += x)
+// }
+
+// Заполните массив следующим образом: в первый элемент запишите 'x', во второй 'xx', в третий 'xxx' и так далее.
+// let arr = [];
+// let x = 'x';
+// let y = '';
+// for (let i = 0; i < 9; i++) {
+//     arr.push(y += x);
+// }
+// console.log(arr);
+
+// Заполните массив следующим образом: в первый элемент запишите '1', во второй '22', в третий '333' и так далее.
+// let arr = [];
+// let int;
+// for (let i = 1; i <= 9; i++) {
+
+//     int = arr.push(String(i).repeat(i))
+// }
+// console.log(arr)
+
+// Сделайте функцию arrayFill, которая будет заполнять массив заданными значениями. 
+// Первым параметром функция принимает значение, которым заполнять массив, 
+// а вторым - сколько элементов должно быть в массиве. Пример: arrayFill('x', 5) сделает массив ['x', 'x', 'x', 'x', 'x']
+// function arrayFill(element, intCount) {
+//     let array = []
+//     let i = 0;
+//     while (i < intCount) {
+//         i = array.push(element);
+//     }
+//     return array
+// }
+
+// console.log(arrayFill('x', 5));
+
+
+// Дан массив с числами. Узнайте сколько элементов с начала массива надо сложить, чтобы в сумме получилось больше 10-ти.
+// let array = [5, 6, 3, 4, 5, 6, 7];
+// function count(array) {
+//     let sum = 0;
+//     for (let i = 0; i <= array.length; i++) {
+//         if (sum > 10) {
+//             sum = i
+//             break;
+//         } else {
+//             sum += array[i];
+//         }
+//     }
+//     return sum;
+// }
+// console.log(count(array));
+
+
+// Дан массив с числами. Не используя метода reverse переверните его элементы в обратном порядке.
+// let array = [1, 2, 3, 4, 5, 6, 7];
+// let reversArray = []
+// for (let i = array.length; i > 0; i--) {
+//     let int = array.pop();
+//     reversArray.push(int)
+// }
+// console.log(reversArray)
+
+// Дан двухмерный массив с числами, 
+// например [[1, 2, 3], [4, 5], [6]]. Найдите сумму элементов этого массива. Массив, конечно же, может быть произвольным
+// let array = [
+//     [1, 2, 3],
+//     [4, 5],
+//     [6]
+// ];
+// let sum = 0;
+// for (let i = 0; i < array.length; i++) {
+//     for (let j = 0; j < array[i].length; j++) {
+//         sum += array[i][j]
+//     }
+// }
+// console.log(sum)
+
+// Дан трехмерный массив с числами, например [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]. 
+// Найдите сумму элементов этого массива. Массив, конечно же, может быть произвольным.
+// let arr = [
+//     [
+//         [1, 2],
+//         [3, 4]
+//     ],
+//     [
+//         [5, 6],
+//         [7, 8]
+//     ]
+// ];
+// let sum = 0;
+// for (let i = 0; i < arr.length; i++) {
+//     for (let j = 0; j < arr[i].length; j++) {
+//         for (let k = 0; k < arr[j].length; k++) {
+//             sum += arr[i][j][k];
+//         }
+//     }
+// }
+// console.log(sum)
+// переворот строки
+// let str = 'qwertyuio';
+// str = str.split('');
+// let reversStr = [];
+// for (let i = str.length; i > 0; i--) {
+//     let int = str.pop();
+//     reversStr.push(int)
+// }
+// console.log(reversStr.join('')) 
+
+
+// Сделайте функцию isNumberInRange, которая параметром принимает число и проверяет, 
+// что оно больше нуля и меньше 10. Если это так - пусть функция возвращает true, если не так - false.
+// function isNumberInRange(int) {
+//     if (int > 0 && int < 10) {
+//         return true
+//     } else
+//         return false
+// }
+// console.log(isNumberInRange(10))
+
+// Дан массив с числами. Запишите в новый массив только те числа, 
+// которые больше нуля и меньше 10-ти. Для этого используйте вспомогательную функцию isNumberInRange из предыдущей задачи.
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+// function isNumberInRange(arr) {
+//     let newArr = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] > 0 && arr[i] < 10) {
+//             newArr.push(arr[i]);
+//         }
+//     }
+//     return newArr
+// }
+// console.log(isNumberInRange(arr))
+
+// Сделайте функцию getDigitsSum (digit - это цифра), которая параметром принимает целое число и возвращает сумму его цифр.
+// function getDigitsSum(int) {
+//     let sum = 0;
+//     if (String(int).length > 1) {
+//         int = String(int).split('')
+//         for (let i = 0; i < int.length; i++) {
+//             sum += Number(int[i])
+//         }
+//         return sum
+//     } else
+//         return int
+// }
+// console.log(getDigitsSum(88))
+
+// Найдите все года от 1 до 2021, сумма цифр которых равна 13. 
+// Для этого используйте вспомогательную функцию getDigitsSum из предыдущей задачи.
+// function getDigitsSum(int) {
+//     let arr = [];
+//     for (let i = 0; i < int; i++) {
+//         let sum = 0;
+//         let int = String(i).split('')
+//         for (let j = 0; j < int.length; j++) {
+//             sum += Number(int[j])
+//             if (sum == 13) {
+//                 arr.push(i)
+//             }
+//         }
+//     }
+//     return arr
+// }
+// console.log(getDigitsSum(2021))
+
+
+
+// Сделайте функцию isEven() (even - это четный), которая параметром принимает целое число и проверяет: четное оно или нет. 
+// Если четное - пусть функция возвращает true, если нечетное - false.
+// function isEven(int) {
+//     if (int % 2 == 0) {
+//         return true
+//     } else
+//         return false
+// }
+// console.log(isEven(22))
+
+
+// Дан массив с целыми числами. Создайте из него новый массив, 
+// где останутся лежать только четные из этих чисел. Для этого используйте вспомогательную функцию isEven из предыдущей задачи.
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+// function isEven(arr) {
+//     let newArr = []
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] % 2 == 0) {
+//             newArr.push(arr[i])
+//         }
+//     }
+//     return newArr
+// }
+// console.log(isEven(arr))
+
+// Сделайте функцию getDivisors, 
+// которая параметром принимает число и возвращает массив его делителей (чисел, на которое делится данное число).
+// function getDivisors(int) {
+//     let arr = []
+//     for (let i = 0; i <= int; i++) {
+//         if (int % i == 0) {
+//             arr.push(i)
+//         }
+//     }
+//     return arr
+// }
+// console.log(getDivisors(25))
+
+// Дана строка. Сделайте заглавным первый символ каждого слова этой строки. Для этого сделайте вспомогательную функцию ucfirst,
+//  которая будет получать строку, делать первый символ этой строки заглавным и возвращать обратно строку с заглавной первой буквой.
+// let str = 'i love javascript, i love php'
+// function ucfirst(str) {
+//     let string = [];
+//     str = str.split(' ');
+//     for (let i = 0; i < str.length; i++) {
+//         let sub = str[i].substring(1)
+//         str[i] = str[i].substring(0, 1).toUpperCase() + sub;
+//         string.push(str[i]);
+//     }
+//     return string.join(' ')
+// }
+// console.log(ucfirst(str))
+
+
+// Дана строка вида 'var_text_hello'. Сделайте из него текст 'varTextHello'.
+// let str = 'var_text_hello'
+// function ucFirst(str) {
+//     let string = [];
+//     str = str.split('_')
+//     string.push(str[0])
+//     for (let i = 0; i < str.length; i++) {
+//         if (i > 0) {
+//             let sub = str[i].substring(1);
+//             str[i] = str[i].substring(0, 1).toUpperCase() + sub;
+//             string.push(str[i])
+//         }
+//     }
+//     return string.join('')
+// }
+// console.log(ucFirst(str))
+
+// Сделайте функцию inArray, которая определяет, есть в массиве элемент с заданным текстом или нет. 
+// Функция первым параметром должна принимать текст элемента, 
+// а вторым - массив, в котором делается поиск. Функция должна возвращать true или false.
+// let arr = ['i', 'love', 'javascript']
+// function inArray(str, arr) {
+//     let i = 0;
+//     while (i < arr.length) {
+//         if (str == arr[i]) {
+//             return true;
+//         } else if (i == arr.length - 1) {
+//             return false
+//         }
+//         i++;
+//     }
+// }
+// console.log(inArray('love', arr))
+
+//  Дана строка, например, '123456'. Сделайте из нее '214365'.
+// function reversStr(str) {
+//     let arr = []
+//     for (let i = 0; i < str.length; i += 2) {
+//         arr.push(str.substring(i, i + 2).split('').reverse().join(''))
+//     }
+//     return arr
+// }
+// console.log(reversStr('123456'))
+
+
+// Работа с рекурсией
+// Дан массив с числами. Выведите последовательно его элементы используя рекурсию и не используя цикл
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// function recurs(arr, i = 0) {
+//     console.log(arr[i])
+//     if (i != arr.length - 1) {
+//         i++
+//         return recurs(arr, i)
+//     }
+// }
+// recurs(arr)
+
+// Дано число. Сложите его цифры. Если сумма получилась 
+// более 9-ти, опять сложите его цифры. И так, пока сумма не станет однозначным числом (9 и менее).
+// let int = 99999;
+// function recurs(int) {
+//     let sum = 0;
+//     let arr = String(int).slice('');
+//     for (let i = 0; i < arr.length; i++) {
+//         sum += parseInt(arr[i]);
+//     }
+//     if (sum > 9) {
+//         return recurs(sum)
+//     } else {
+//         return sum
+//     }
+// }
+// console.log(recurs(int))

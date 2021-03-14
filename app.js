@@ -1119,3 +1119,922 @@
 //     }
 // }
 // console.log(recurs(int))
+
+// сумма диапозона
+
+// function range(start, end, step = 1) {
+//     let arr = [];
+//     if (step > 0) {
+//         for (let i = start; i <= end; i += step) {
+//             arr.push(i);
+//         }
+//     } else if (step < 0) {
+//         for (let i = start; i >= end; i += step) {
+//             arr.push(i);
+//         }
+//     }
+
+//     return arr
+// }
+
+// function sum(arr) {
+//     console.log(arr)
+//     let sumInt = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//         sumInt += parseInt(arr[i]);
+//     }
+//     console.log(sumInt);
+// }
+
+// sum(range(5, 2, -1))
+
+
+
+
+
+
+// dom
+
+
+// let input = document.getElementById('text');
+// function clickButton() {
+//     alert(input.value);
+// }
+
+// ---------------------------------------------------------------------
+
+// let input = document.getElementById('text');
+// function changeInput() {
+//     input.value = 'привет'
+// }
+
+// ---------------------------------------------------------------------
+
+// function inputChange(val) {
+//     alert(val.value);
+//     val.value = 'привет'
+// }
+
+// ---------------------------------------------------------------------
+
+// function inputChange(val) {
+//     val.value = 'текст поменялся';
+
+// ---------------------------------------------------------------------
+
+// }
+// function inputChangeOut(val) {
+//     val.value = 'ещё раз поменялся';
+// }
+
+// ---------------------------------------------------------------------
+
+// function changeTextSubmit(val) {
+//     val.value = 'ку-ку';
+// }
+
+// ---------------------------------------------------------------------
+
+// function changeTextSubmit(val) {
+//     val.setAttribute("disabled", "disabled")
+//     val.value = 'ку-ку';
+// }
+
+// ---------------------------------------------------------------------
+
+// function inputStyleChange() {
+//     let input = document.getElementById('input');
+//     input.style.color = 'red';
+//     input.style.width = '30%'
+// }
+
+// ---------------------------------------------------------------------
+
+// function inputStyleChange() {
+//     let input = document.getElementById('input');
+//     input.style.display = 'none';
+
+// }
+// function inputStyleChangeRevers() {
+//     let input = document.getElementById('input');
+//     input.style.display = 'inline';
+// }
+
+// ---------------------------------------------------------------------
+
+// function inputStyleChange() {
+//     let input = document.getElementById('input');
+//     input.style.borderRadius = '15px';
+//     input.style.padding = '20px';
+//     input.style.weight = '50%';
+//     input.style.color = 'red';
+//     input.value = 'новый текст'
+// }
+
+// ---------------------------------------------------------------------
+
+// function sabmitStyleChange(id) {
+//     id.setAttribute("disabled", "disabled");
+//     id.value = 'нажать нельзя';
+//     document.getElementById('ChangeRevers').style.display = 'inline'
+// }
+// function sabmitStyleChangeRevars(input) {
+//     let inp = document.getElementById('Change');
+//     inp.removeAttribute("disabled");
+//     inp.value = 'нажми на меня';
+//     input.style.display = 'none'
+// }
+
+// ---------------------------------------------------------------------
+
+// function inputCountsum(inp) {
+//     let i = parseInt(inp.value);
+//     i++;
+//     inp.value = i;
+// }
+
+// ---------------------------------------------------------------------
+
+// function inpuTextChange() {
+//     let text1 = document.getElementById('text1');
+//     let text2 = document.getElementById('text2');
+//     let text1Value = text1.value;
+//     let text2Value = text2.value;
+//     text1.value = text2Value;
+//     text2.value = text1Value;
+// }
+
+// ---------------------------------------------------------------------
+
+// function inpuIntSquare() {
+//     let int = document.getElementById('int');
+//     if (!parseInt(int.value)) {
+//         alert('введите число')
+//     } else {
+//         document.getElementById('square').value = parseInt(int.value * int.value);
+//     }
+// }
+
+// ---------------------------------------------------------------------
+
+// function inpuElemAdd(elem) {j
+//     let input = document.getElementById('input');b
+//     input.value += elem.value;
+// }
+
+// ---------------------------------------------------------------------
+
+// function textReplace() {
+//     let p = document.querySelector('#p');
+//     p.outerHTML = '<b>' + p.innerHTML + '</b>'
+// }
+
+// ---------------------------------------------------------------------
+
+// function intSum() {
+//     let input1 = document.querySelector('#input1');
+//     let input2 = document.querySelector('#input2');
+//     let p = document.querySelector('#p');
+//     if (!input1.value) {
+//         input1.value = 0;
+//     }
+//     if (!input2.value) {
+//         input2.value = 0;
+//     }
+//     p.innerHTML = parseInt(input1.value) + parseInt(input2.value);
+// }
+
+// ---------------------------------------------------------------------
+
+// function textSquare() {
+//     let p = document.getElementsByTagName('p');
+//     for (let i = 0; i < p.length; i++) {
+//         p[i].innerHTML = 'sadsadsad';
+//     }
+// }
+
+// ---------------------------------------------------------------------
+
+// function TextSquareClassName() {
+//     let cls = document.getElementsByClassName('www');
+//     for (let i = 0; i < cls.length; i++) {
+//         cls[i].innerHTML = i;
+//     }
+// }
+
+// ---------------------------------------------------------------------
+
+// function TextSquarePClassName() {
+//     let cls = document.querySelectorAll('p.www');
+//     for (let i = 0; i < cls.length; i++) {
+//         cls[i].innerHTML = i;
+//     }
+// }
+
+// ---------------------------------------------------------------------
+
+// function getAttr() {
+//     if (!document.querySelector('p').hasAttribute('class')) {
+//         alert('класс удалён')
+//     } else {
+//         alert(document.querySelector('.myClass').getAttribute('class'))
+//     }
+// }
+
+// function getAttrRemove() {
+//     document.querySelector('p').removeAttribute('class')
+//     alert('класс удалён')
+// }
+
+// function setAttrReplacement() {
+//     let attr = document.querySelector('p');
+//     attr.setAttribute('class', 'new-class');
+//     alert(attr.getAttribute('class'));
+// }
+
+// ---------------------------------------------------------------------
+
+// function inpValue() {
+//     let attr = document.querySelector('#input');
+//     let attr1 = document.querySelector('span');
+//     attr1.innerHTML = attr.value;
+// }
+
+// ---------------------------------------------------------------------
+
+// function  viewLink() {
+//   let attr = document.querySelectorAll('a');
+//   for (let i =0;i<attr.length;i++){
+//       attr[i].innerHTML = attr[i].innerHTML + '('+ attr[i].href+')';
+//   }
+// }
+
+// ---------------------------------------------------------------------
+
+// function  disablButtonReplaceColorP(but) {
+// let attr = document.querySelector('#p');
+// attr.style.color = 'red';
+// but.setAttribute('disabled','disabled');
+// }
+
+// ---------------------------------------------------------------------
+
+// function TextReplaceP() {
+//  let attr = document.querySelectorAll('p');
+//  for(let i= 0;i<attr.length;i++){
+//      attr[i].innerHTML = i
+//     }
+// }
+
+// ---------------------------------------------------------------------
+
+// function TextReplacePText() {
+//  let attr = document.querySelectorAll('p');
+//  for(let i= 0;i<attr.length;i++){
+//      attr[i].innerHTML = i +'. ' + attr[i].innerHTML
+//     }
+// }
+
+
+//DATE
+// Выведите на экран текущую дату-время в формате '12:59:59 31.12.2014'. Для решения этой задачи напишите функцию,
+// которая будет добавлять 0 перед днями и месяцами, которые состоят из одной цифры (из 1.9.2014 сделает 01.09.2014)
+// function date(){
+//     let date = new Date();
+//  let realDate = date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds()+' '
+//      + zeroDate(date.getDate()) +'.'+zeroDate(date.getMonth() + 1)+'.'+date.getFullYear();
+//  return realDate
+// }
+// function zeroDate(date){
+//     if(String(date).length<2){
+//         date = '0'+ date;
+//         return date;
+//     }
+//     return date;
+// }
+// console.log(date())
+// let date = new Date(2015,0,7);
+// console.log((date.getDay()))
+
+//Выведите на экран количество минут с 1-го января 1970 года до настоящего момента времени
+// let date = new Date();
+// let time = date.getTime();
+// console.log(Math.floor((time / 1000) / 60))
+//Выведите на экран количество часов, прошедшее между 1 марта 1988 года и текущим моментом с помощью Date.parse
+// let time = Date.parse('1988-03-01T00:00:00');
+// let date = new Date();
+// let now = date.getTime();
+// let result = now - time;
+// console.log(Math.floor(result/(1000*60*60)))
+//Выведите на экран количество секунд с начала дня до настоящего момента времени
+// let time = Date.parse('2021-02-17T00:00:00')
+// let date = new Date();
+// let now = date.getTime();
+// let result = now - time;
+// document.write(Math.floor(result/1000))
+// let date1 = new Date();
+// let now1 = new Date(date1.getFullYear(), date1.getMonth(), date1.getDate(), 0, 0, 0);
+// let result1 = Math.floor((date1.getTime() - now1.getTime()) / 1000);
+// alert(result1);
+
+//Выведите на экран количество секунд, которое осталось до конца дня
+// let date = new Date();
+// let now = new Date(date.getFullYear(), date.getMonth(), date.getDay(),date.getHours(),date.getMinutes(),date.getSeconds());
+// let endDay = new Date(date.getFullYear(), date.getMonth(), date.getDay(), 23,59,59);
+// let result = Math.floor(((endDay - now) /1000))
+// document.write(result)
+
+//Создайте инпут, в который пользователь вводит дату своего рождения в формате '2014-12-31' (с конкретным годом).
+// По потери фокуса выведите под инпутом сколько дней осталось до его дня рождения. Воспользуйтесь методом Date.parse.
+// function getDateBirth(date) {
+//   let dateBirth = date.value.split('-');
+//   let datenow = new Date();
+//   let dateTime = Date.parse(`${String(datenow.getFullYear())}-${String(dateBirth[1])}-${String(dateBirth[2])}` + 'T00:00:00')
+//   let now = 0;
+//   let time = datenow.getTime()
+//   if(time > dateTime){
+//     now = Date.parse(`${String(datenow.getFullYear()+1)}-${String(dateBirth[1])}-${String(dateBirth[2])}` + 'T00:00:00')
+//     now = (now - time) / (1000*60*60*24);
+//   }else if(time < dateTime){
+//     now = Date.parse(`${String(datenow.getFullYear())}-${String(dateBirth[1])}-${String(dateBirth[2])}` + 'T00:00:00')
+//     now = (now - time)  / (1000*60*60*24);
+//   }
+//   let birth = document.querySelector('#dateBirth');
+//   birth.innerHTML = '<p>' + Math.floor(now +1) + '</p>'
+// }
+
+
+// Создайте отсчет с кнопкой остановки:
+// let count = document.querySelector('#count');
+// count.addEventListener('click',()=>{
+//     but.removeAttribute('disabled')
+//   window.timeId = window.setInterval(timer, 1000);
+// })
+// let but = document.querySelector('#but');
+// but.addEventListener('click', ()=>{
+//     window.clearInterval(window.timeId);
+//     but.setAttribute('disabled','disabled')
+// })
+// function timer() {
+// let p = document.querySelector('p');
+// let text = p.innerHTML;
+// if(text < 10){
+//     p.innerHTML = parseInt(text)+1;
+// }
+// }
+
+// Создайте тикающие часики
+// let time = document.querySelector('#time');
+// window.addEventListener('load',()=>{
+//     setInterval('clock()', 1000);
+// })
+// let clock = ()=>{
+//     let date = new Date();
+//     let hours = date.getHours();
+//     let minutes = date.getMinutes();
+//     let second = date.getSeconds();
+//     if((String(second).length < 2)){
+//         second = '0'+second;
+//     }
+//     if((String(minutes).length < 2)){
+//         // console.log('123')
+//         minutes = '0'+minutes;
+//     }
+//     time.innerHTML = hours +':'+minutes+':'+second;
+// }
+
+//Создайте простой слайдер
+// window.addEventListener('load',()=>{
+//     let i =0;
+//    window.setInterval(()=>{
+//        let slider= document.querySelector('#slider')
+//        let image = slider.querySelector('img');
+//        let arrImage = ['1.png','2.png','3.png'];
+//        image.src = '/images/' + arrImage[i];
+//        i++;
+//        if(i == arrImage.length){
+//            i = 0;
+//        }
+//    }, 1000);
+// })
+
+//courusel
+// let button = document.querySelector('#button')
+// button.addEventListener('click',()=>{
+//     button.setAttribute('disabled','disabled');
+// let img1 = document.querySelector('#img1');
+//     let img2 = document.querySelector('#img2');
+//     let img3 = document.querySelector('#img3');
+//         setInterval(()=>{
+//       let tmp = img1.src;
+//             img1.src = img2.src;
+//             img2.src = img3.src;
+//             img3.src = tmp;
+//
+//         },1000);
+// })
+
+//время до полуночи
+// window.addEventListener('load',()=>{
+//    window.timerId = window.setInterval(timer,1000);
+// })
+//
+// function timer() {
+// let hours = document.querySelector('#hours');
+//    let minutes = document.querySelector('#minutes');
+//    let seconds = document.querySelector('#seconds');
+//    let now = new Date();
+//    let midnight = new Date(now.getFullYear(),now.getMonth(),now.getDate()+1,0,0,0);
+//    let diff = Math.floor((midnight-now)/1000);
+//    let hoursRemain = Math.floor(diff/(60*60));
+//    let minutesRemain = Math.floor((diff - hoursRemain*60*60)/60);
+//    let secondRemain = Math.floor(diff%60);
+//    hours.innerHTML = hoursRemain;
+//    minutes.innerHTML = addZero(minutesRemain);
+//    seconds.innerHTML = addZero(secondRemain);
+//
+// }
+// function addZero(num) {
+// if(num<=9){
+//    return'0'+num;
+// }
+// return num;
+// }
+
+//Даны картинки. Привяжите к каждой картинке событие, чтобы по клику на картинку алертом выводился ее src.
+// window.addEventListener('load',()=>{
+// let elements = document.querySelectorAll('img');
+// for (elem of elements){
+//    elem.onclick = func;
+// }
+//    function func() {
+//       alert(this.getAttribute('src'));
+//    }
+// })
+
+//Даны ссылки. Привяжите всем ссылкам событие - по наведению на ссылку в атрибут title запишется ее текст
+// Привяжите всем ссылкам событие - по наведению на ссылку в конец ее текста дописывается ее href в круглых скобках
+//Дополните предыдущую задачу: после первого наведению на ссылку следует отвязать от нее событие, которое добавляет href в конец текста.
+// let a = document.querySelectorAll('a');
+// for(elem of a){
+//     elem.addEventListener('mouseover',func);
+// }
+// function func() {
+//   this.setAttribute('title', this.innerHTML);
+//   this.innerHTML = this.innerHTML + '('+ this.getAttribute('href')+ ')';
+//   this.removeEventListener('mouseover',func);
+// }
+
+//Привяжите всем инпутам следующее событие - по потери фокуса каждый инпут выводит свое value в абзац с id="test".
+//Для всех инпутов сделайте так, чтобы они выводили свой value алертом при нажатии на любой из них,
+// но только по первому нажатию. Повторное нажатие на инпут не должно вызывать реакции
+// let inputs = document.querySelectorAll('input');
+// for(elem of inputs){
+//   // elem.addEventListener('blur',func);
+//     elem.addEventListener('click',func);
+// }
+// function func() {
+//  // let test = document.getElementById('test');
+//  // test.innerHTML = this.value;
+//     alert(this.value);
+//     this.removeEventListener('click',func);
+// }
+
+//Даны абзацы с числами. По нажатию на абзац в нем должен появится квадрат числа, которое он содержит
+// let div = document.querySelector('#intSquare');
+// let p = div.querySelectorAll('p');
+// for(elem of p){
+//     elem.addEventListener('click', func);
+// }
+// function func() {
+//   this.innerHTML = 'квадрат числа ' + this.innerHTML + ' = ' + this.innerHTML * this.innerHTML;
+//   this.removeEventListener('click',func);
+// }
+
+//Даны инпуты. Сделайте так, чтобы все инпуты по потери фокуса проверяли свое содержимое на правильное количество символов.
+// Сколько символов должно быть в инпуте, указывается в атрибуте data-length.
+// Если вбито правильное количество, то граница инпута становится зеленой, если неправильное - красной.
+// let input = document.querySelectorAll('input');
+// for(elem of input){
+//     elem.addEventListener('blur',func);
+// }
+// function func() {
+//     if(this.dataset.length == this.value.length){
+//         this.style.borderColor = 'green';
+//     }else {
+//         this.style.borderColor = 'red';
+//     }
+// }
+
+//Даны дивы. По первому нажатию на каждый див он красится красным фоном, по второму красится обратно и так далее каждый
+// клик происходит чередование фона.
+// Сделайте так, чтобы было две функции: одна красит в красный цвет, другая в зеленый и они сменяли друг друга через removeEventListener
+// let div = document.querySelectorAll('div');
+// for(elem of div){
+//     elem.addEventListener('click', funcRed)
+// }
+// function funcGreen() {
+//    this.style.backgroundColor = 'green';
+//         this.removeEventListener('click', funcGreen);
+//         this.addEventListener('click', funcRed)
+// }
+// function funcRed() {
+//   this.style.backgroundColor = 'red';
+//       this.removeEventListener('click', funcRed);
+//       this.addEventListener('click', funcGreen)
+// }
+
+// Дан элемент #elem. Добавьте ему класс www.
+// Дан элемент #elem. Удалите у него класс www.
+// Дан элемент #elem. Проверьте наличие у него класса www.
+// Дан элемент #elem. Добавьте ему класс www, если его нет и удалите - если есть.
+// Дан элемент #elem. Узнайте количество его классов.
+// Дан элемент #elem. Выведите последовательно алертом его классы.
+// let div = document.querySelector('div');
+//     div.classList.add('www');
+// div.classList.remove('www');
+// console.log(div.classList.contains('www'));
+// div.classList.toggle('www');
+// console.log(div.classList.contains('www'));
+// console.log(div.classList.length);
+// for(elem of div.classList){
+//     alert(elem)
+// }
+
+// Дан элемент #elem. Сделайте его красного цвета, размером 30px, добавьте ему границу. Решите задачу с помощью свойства cssText
+// let elem = document.querySelector('#elem');
+// elem.style.cssText = 'background: red; font-size: 20px; width:30px; heigth: 30px; border: solid';
+
+//Дан элемент #elem. По клику на него выведите название его тега.
+//  Дан элемент #elem. По клику на него выведите название его тега в нижнем регистре.
+//  Даны элементы с классом www. Добавьте каждому элементу в конец название его тега в нижнем регистре.
+// let div = document.querySelectorAll('.www');
+// div.addEventListener('click',()=>{
+//     alert(div.tagName)
+//     alert(div.tagName.toLowerCase())
+// })
+// for(elem of div){
+//     elem.classList = elem.className + elem.tagName.toLowerCase();
+// }
+
+// Дан ol. Вставьте ему в конец li с текстом 'пункт'
+// let ol = document.querySelector('#ol');
+// let li = document.createElement('li');
+// li.innerHTML = 'пункт';
+// ol.appendChild(li);
+
+
+// Дан ul. Дан массив. Вставьте элементы этого массива в конец ul так, чтобы каждый элемент стоял в своем li.
+// let ul = document.querySelector('#ul');
+// let arr = [1,2,3,4,5,6,7,8,9,10];
+// for(let i =0; i<=arr.length; i++){
+//     let li = document.createElement('li');
+//     li.innerHTML = i;
+//     ul.appendChild(li);
+// }
+
+//Дан элемент ul, а в нем li #elem. Вставьте перед элементом #elem новую li с текстом '!!!'.
+// let parent = document.querySelector('#elem');
+// let ul = document.querySelector('ul');
+// let li = document.createElement('li');
+// li.innerHTML = '!!!';
+// ul.insertBefore(li,parent);
+//Дан элемент #elem. Вставьте перед ним span с текстом '!!!'.
+//Дан элемент #elem. Вставьте после него span с текстом '!!!'.
+//Дан элемент #elem. Вставьте ему в начало span с текстом '!!!'.
+//Дан элемент #elem. Вставьте ему в конец span с текстом '!!!'.
+// let elem = document.getElementById('elem');
+// elem.insertAdjacentHTML("beforebegin", '<span>!!!</span>')
+// elem.insertAdjacentHTML("afterend", '<span>!!!</span>')
+// elem.insertAdjacentHTML("afterbegin", '<span>!!!</span>')
+// elem.insertAdjacentHTML("beforeend", '<span>!!!</span>')
+
+
+//Дан элемент #elem. Найдите первого потомка этого элемента и сделайте его текст красного цвета
+//Дан элемент #elem. Найдите последнего потомка этого элемента и сделайте его текст красного цвета.
+//Дан элемент #elem. Найдите всех потомков этого элемента и добавьте им в конец текст '!'.
+// let parent = document.querySelector('#elem');
+// let text = parent.firstElementChild.style.color = 'red';
+// let text1 = parent.lastElementChild.style.color = 'red';
+// let text2 = parent.children;
+// for (elem of text2){
+//     elem.innerHTML = elem.innerHTML + '!';
+// }
+
+
+//Дан элемент #elem. Найдите его соседа сверху и добавьте ему в конец текст '!'.
+//Дан элемент #elem. Найдите его соседа снизу и добавьте ему в конец текст '!'.
+//Дан элемент #elem. Найди��е его соседа снизу его соседа снизу (следующий элемент за соседним) и добавьте ему в конец текст '!'.
+// let elem = document.querySelector('#elem');
+// let nbour = elem.previousElementSibling;
+// nbour.innerHTML = nbour.innerHTML + '!';
+// let nbour1 = elem.nextElementSibling;
+// nbour1.innerHTML = nbour1.innerHTML + '!';
+// let nbour2 = elem.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+// nbour2.innerHTML = nbour2.innerHTML + '!';
+
+
+//Дан элемент #elem. Найдите его родителя и покрасьте его в красный цвет.
+//Дан элемент #elem. Найдите родителя его родителя и покрасьте его в красный цвет.
+// let elem = document.querySelector('#elem');
+// let parent = elem.parentElement;
+// parent.style.backgroundColor = 'red'
+// let parent2 = parent.parentElement;
+// parent2.style.backgroundColor = 'green';
+
+
+//Дан элемент #parent, внутри него дан элемент #child. Дана кнопка. По нажатию на эту кнопку удалите элемент #child.
+//Дан ol. По нажатию на кнопку получите его последнего потомка и удалите его.
+//Дан элемент. Сделайте так, чтобы по нажатию по нему этот элемент удалялся.
+//Дан ol, а внутри него li. Сделайте так, чтобы по нажатию на любую li эта li удалялась.
+// document.querySelector('#button').addEventListener('click',()=>{
+// let parent = document.querySelector('#parent');
+// let child = document.querySelector('#child');
+// parent.removeChild(child);
+
+//     let ol =document.querySelector('ol');
+//     let lastChild = ol.lastElementChild;
+//     ol.removeChild(lastChild);
+// })
+// document.querySelector('#elem').addEventListener('click', ()=>{
+//     let elem = document.querySelector('#elem')
+//     elem.parentElement.removeChild(elem)
+// })
+// let ol = document.querySelector('#ol');
+// let child = ol.querySelectorAll('li').forEach(elem => elem.addEventListener('click',()=>{
+//    elem.parentElement.removeChild(elem);
+// }))
+
+
+// Дан инпут. Дана кнопка. По нажатию на кнопку клонируйте этот инпут.
+// document.querySelector('#button').addEventListener('click',()=>{
+//     let input = document.querySelector('#input');
+//     let clone = input.cloneNode();
+//     document.querySelector('body').appendChild(clone)
+// })
+
+//Дан массив. Создайте ul через createElement,
+// затем вставьте каждый элемент этого массива в отдельную li внутри этой ul, затем вставьте эту ul в конец body.
+// let arr = [1,2,3,4,5,6,7,8,9];
+// let ul = document.createElement('ul');
+// arr.forEach(elem=>{
+//   let li = document.createElement('li');
+//   li.innerHTML = elem;
+//   ul.append(li);
+// })
+// let body = document.querySelector('body');
+// body.append(ul);
+
+//Дан инпут. Рядом с ним находится кнопочка "+". По нажатию на эту кнопку под нашим инпутом должен появится еще один пустой инпут.
+// let button = document.querySelector('#button');
+// button.addEventListener('click',()=>{
+//     let input = document.createElement('input');
+//     input.type = 'text';
+//     let docInput = document.querySelector('#input').insertAdjacentElement('afterend',input);
+// })
+
+
+//Дан инпут. В него вводится число. По потери фокуса сделайте так, чтобы каждая цифра вставилась в новый инпут.
+// Инпутов для цифр изначально не существует, они должны создаться в процессе работы скрипта.
+// let input = document.querySelector('#input');
+// input.addEventListener('blur', ()=>{
+//     let body = document.querySelector('body');
+//     let newInput = input.value.split('');
+//     newInput.forEach(elem =>{
+//         let createInput = document.createElement('input');
+//         createInput.style.color = 'red';
+//         createInput.value = elem;
+// body.append(createInput);
+//     })
+// })
+
+
+//Дана кнопка. Сделайте так, чтобы по нажатию на эту кнопку, скрывался родитель этой кнопки.
+// let button = document.querySelector('#button');
+// button.addEventListener('click', displayNone);
+// function displayNone() {
+//   button.parentElement.style.display = 'none';
+// }
+
+// let f = function g() {
+//     return 23;
+// }
+// alert(typeof g());
+
+
+// class Animal {
+//     constructor(name) {
+//         this.name = name;
+//     }
+// }
+
+// class Rabbit extends Animal {
+//     constructor(name) {
+//         super(name);
+//         this.created = Date.now();
+//     }
+// }
+// let rabbit = new Rabbit("Белый кролик");
+// alert(rabbit.name);
+
+// function foo(a, b) {
+//     console.log(arguments.length);
+// }
+// foo(1, 2, 3);
+
+// Если переменная a больше нуля - то в ggg запишем функцию, которая выводит один !, иначе запишем функцию, которая выводит два !
+// const a = -1;
+// let ggg = function(a) {
+//     if (a > 0) {
+//         return '!';
+//     } else {
+//         return ('!!');
+//     }
+// }
+// console.log(ggg(a))
+
+// Функция ggg принимает 2 параметра: число и анонимную функцию, 
+// которая возводит число в квадрат. Возведите число в 4-тую степень с помощью ggg
+// let ggg = function(n, f) { return f(n) };
+// let funcNew = function(a) { return Math.pow(a, 4) };
+// let a = 7;
+// alert(ggg(a, funcNew));
+
+
+// Функция ggg принимает 2 параметра: анонимную функцию, которая возвращает 
+// 3 и анонимную функцию, которая возвращает 4. Верните результатом функции ggg сумму 3 и 4
+// let ggg = function(n, f) { return n() + f() };
+// let funcN = function() { return 3 };
+// let funcF = function() { return 4 };
+// alert(ggg(funcN, funcF));
+
+
+// Дана функция ggg. Она требует первым параметром число, вторым функцию, которая возводит в квадрат, 
+// а третьим параметром функцию, которая возводит в куб. 
+// Эти функции есть как Function Declaration - kvadrat, kub. Пусть функция ggg вернет сумму квадрата и куба числа
+// function ggg(n, f, z) {
+//     alert(f(n) + z(n));
+// }
+// function kvadrat(a) {
+//     return Math.pow(a, 2);
+// }
+// function kub(a) {
+//     return Math.pow(a, 3);
+// }
+// ggg(5, kvadrat, kub);
+
+
+// Сделайте функцию each, которая первым параметром принимает массив, 
+// а вторым - функцию, которая применится к каждому элементу массива. Функция each должна вернуть измененный массив
+// function each(arr, f, ) {
+//     alert(f(arr));
+// }
+// function map(n) {
+//     let arr = n.map((num) => { return num * 2 });
+//     return arr;
+// }
+// each([1, 2, 3, 4, 5], map);
+
+
+
+// Сделайте функцию each, которая первым параметром принимает массив, а вторым - массив функций, 
+// которые по очереди применятся к каждому элементу массива: к первому элементу массива - первая функция, 
+// ко второму - вторая и так далее пока функции в массиве не закончатся, после этого возьмется первая функция, вторая и так далее по кругу
+// function each(arr, funcArr) {
+//     let newArr = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         let current = funcArr[i % funcArr.length](arr[i]);
+//         newArr.push(current);
+//     }
+//     return newArr;
+// }
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// function a(n) { return n * 1 };
+// function b(n) { return n * 2 };
+// function c(n) { return n * 3 };
+// let arrFunc = [a, b, c];
+// alert(each(arr, arrFunc));
+
+
+// Сделайте функцию, которая считает и выводит количество своих вызовов
+// function func() {
+//     let i = 1;
+//     return function() {
+//         return i++;
+//     };
+// }
+// let f = func();
+// console.log(f());
+// console.log(f());
+// console.log(f());
+// console.log(f());
+// console.log(f());
+
+// Даны кнопки. Привяжите к каждой кнопке событие по клику, которое будет считать 
+// количество нажатий по кнопке и выводить его в текст кнопки. Количество нажатий для каждой кнопки должно хранится в замыкании
+// let button1 = document.querySelector('#button1');
+// let button2 = document.querySelector('#button2');
+// button1.addEventListener('click', () => {
+//     button1.innerHTML = f();
+// });
+// button2.addEventListener('click', () => {
+//     button2.innerHTML = n();
+// })
+// function func() {
+//     let i = 1;
+//     return function() {
+//         return i++;
+//     }
+// }
+// let f = func();
+// let n = func();
+
+
+
+
+// Дан массив цветов. Даны абзацы. По первому нажатию на абзац 
+// он должен покраситься в первый цвет из массива, по второму нажатию - во второй и так далее. Все абзацы работают независимо.
+// let arrColor = ['red', 'black', 'blue', 'green', 'magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
+// let p = document.querySelectorAll('p');
+// function styleColorP() {
+//     let i = 0;
+//     return function() {
+//         this.style.color = arrColor[i];
+//         i++;
+//         if (i == arrColor.length) {
+//             i = 0;
+//         }
+//     }
+// }
+// for (let i = 0; i < p.length; i++) {
+//     p[i].addEventListener('click', styleColorP())
+// }
+
+
+// Сделайте функцию, каждый вызов который будет генерировать случайные числа от 1 до 100, но так, чтобы они не повторялись, 
+// пока не будут перебраны все числа из этого промежутка. 
+// Решите задачу через замыкания - в замыкании должен хранится массив чисел, которые уже были сгенерированы функцией
+// function numRand() {
+//     let arr = [];
+//     return function() {
+//             let num = Math.floor(Math.random() * 100 + 1);
+//             for (let i = 0; i < arr.length; i++) {
+//                 if (arr[i] == num) return;
+//             };
+//             parag.innerHTML += num + ', ';
+//             arr.push(num);
+//     }
+// }
+// let but = document.querySelector('button').addEventListener('click', numRand());
+// let parag = document.querySelector('p');
+
+
+
+
+
+
+
+
+
+//задачи из learn.javascript
+
+// Перепишите функцию, используя оператор '?' или '||'
+// function checkAge(age) {
+// if (age > 18) {
+//     return true;
+// } else {
+//     return confirm('Родители разрешили?');
+// }
+// return  (age > 18) ? true : confirm('Родители разрешили?');
+// return (age>18)|| confirm('Родители разрешили?');
+// }
+//Напишите функцию pow(x,n), которая возвращает x в степени n. Иначе говоря, умножает x на себя n раз и возвращает результат.
+
+// function pow(x,n) {
+//    let i =1;
+//   let sum = x;
+//    while (i < n){
+//       sum *= x;
+//        i++;
+//    }
+//    return sum;
+// }
+// console.log(pow(2,4));
+
+//Замените код Function Expression стрелочной функцией:
+// function ask(question, yes, no) {
+//     if (confirm(question)) yes()
+//     else no();
+// }
+//
+// ask(
+//     "Вы согласны?",
+//     function() { alert("Вы согласились."); },
+//     function() { alert("Вы отменили выполнение."); }
+// );
+// let ask = (question, yes, no) =>{
+//     confirm(question) ? yes() : no();
+// }
+// ask("Вы согласны?",
+//     () =>{ alert("Вы согласились."); },
+//     () =>{ alert("Вы отменили выполнение."); })
